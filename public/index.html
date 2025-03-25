@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat WebSocket - Faculdade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>Chat WebSocket</h1>
+            <div class="connection-status" id="connection-status">Conectando...</div>
+        </header>
+        
+        <div class="chat-messages" id="chat-messages"></div>
+        
+        <div class="input-area">
+            <input type="text" id="username" placeholder="Seu nome" class="username-input">
+            <input type="text" id="message-input" placeholder="Digite sua mensagem..." class="message-input">
+            <button id="send-button" class="send-button">Enviar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
