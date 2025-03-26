@@ -46,6 +46,62 @@ document.addEventListener('DOMContentLoaded', () => {
       connectionStatus.style.color = color;
   }
 
+// Remova as linhas relacionadas ao usernameInput original
+const modal = document.getElementById('username-modal');
+const modalUsername = document.getElementById('modal-username');
+const modalSubmit = document.getElementById('modal-submit');
+
+// Mostrar modal ao carregar
+modal.style.display = 'flex';
+
+// Enviar username do modal
+modalSubmit.addEventListener('click', () => {
+  const name = modalUsername.value.trim();
+  if (name) {
+    username = name;
+    modal.style.display = 'none';
+    setUsername(name);
+    messageInput.focus();
+  }
+});
+
+// Permitir submit com Enter
+modalUsername.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    modalSubmit.click();
+  }
+});
+
+// Modifique a função setUsername para:
+function setUsername(name) {
+  if (isConnected && name.trim()) {
+    username = name.trim();
+    localStorage.setItem('chat_username', username);
+    ws.send(JSON.stringify({
+      type: 'set_username',
+      username: username
+    }));
+    
+    // Mostrar mensagem de boas-vindas
+    displayMessage({
+      type: 'system',
+      message: `Bem-vindo, ${username}!`
+    });
+  }
+}
+
+// No connectWebSocket(), modifique o onopen:
+ws.onopen = () => {
+  isConnected = true;
+  updateConnectionStatus('Conectado', '#4CAF50');
+  
+  // Se já tiver username salvo, definir automaticamente
+  if (localStorage.getItem('chat_username')) {
+    username = localStorage.getItem('chat_username');
+    setUsername(username);
+  }
+};
+
   // Definir nome de usuário
   function setUsername(name) {
       if (isConnected && name.trim()) {
