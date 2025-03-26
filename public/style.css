@@ -6,21 +6,22 @@
 }
 
 body {
-  background-color: #f0f2f5;
+  background-color: #121724;
   padding: 20px;
+  color: white;
 }
 
 .chat-container {
   max-width: 800px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #12394f;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
 header {
-  background-color: #2c3e50;
+  background-color: #146783;
   color: white;
   padding: 15px 20px;
   display: flex;
@@ -34,27 +35,28 @@ header h1 {
 
 .connection-status {
   font-size: 0.8rem;
-  color: #ecf0f1;
+  color: #20dad8;
 }
 
 .chat-messages {
   height: 400px;
   padding: 20px;
   overflow-y: auto;
-  background-color: #f9f9f9;
+  background-color: #12394f;
 }
 
 .message {
   margin-bottom: 15px;
   padding: 10px 15px;
   border-radius: 8px;
-  background-color: #e3f2fd;
+  background-color: #146783;
   max-width: 70%;
+  color: white;
 }
 
 .message.system {
   background-color: transparent;
-  color: #666;
+  color: #20dad8;
   font-style: italic;
   text-align: center;
   margin: 10px 0;
@@ -62,7 +64,7 @@ header h1 {
 
 .message.sent {
   margin-left: auto;
-  background-color: #dcf8c6;
+  background-color: #1da4c3;
 }
 
 .message-info {
@@ -70,35 +72,39 @@ header h1 {
   justify-content: space-between;
   margin-bottom: 5px;
   font-size: 0.8rem;
-  color: #555;
+  color: #20dad8;
 }
 
 .input-area {
   display: flex;
   padding: 15px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
+  background-color: #12394f;
+  border-top: 1px solid #146783;
 }
 
 .username-input {
   width: 120px;
   padding: 10px;
   margin-right: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #1da4c3;
   border-radius: 4px;
+  background-color: #146783;
+  color: white;
 }
 
 .message-input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #1da4c3;
   border-radius: 4px;
+  background-color: #146783;
+  color: white;
 }
 
 .send-button {
   padding: 10px 20px;
   margin-left: 10px;
-  background-color: #2c3e50;
+  background-color: #1da4c3;
   color: white;
   border: none;
   border-radius: 4px;
@@ -107,7 +113,7 @@ header h1 {
 }
 
 .send-button:hover {
-  background-color: #1a252f;
+  background-color: #20dad8;
 }
 
 @media (max-width: 600px) {
