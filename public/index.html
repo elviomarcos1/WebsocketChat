@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="modal" id="username-modal">
+        <div class="modal-content">
+          <h2>Bem-vindo ao Chat!</h2>
+          <p>Digite seu nome para começar:</p>
+          <input type="text" id="modal-username" placeholder="Seu nome" autofocus>
+          <button id="modal-submit">Entrar</button>
+        </div>
+      </div>
+
     <div class="chat-container">
         <header>
             <h1>Chat WebSocket</h1>
@@ -16,11 +26,10 @@
         <div class="chat-messages" id="chat-messages"></div>
         
         <div class="input-area">
-            <input type="text" id="username" placeholder="Seu nome" class="username-input">
             <input type="text" id="message-input" placeholder="Digite sua mensagem..." class="message-input">
             <button id="send-button" class="send-button">Enviar</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -82,14 +82,64 @@ header h1 {
   border-top: 1px solid #146783;
 }
 
-.username-input {
-  width: 120px;
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #1da4c3;
-  border-radius: 4px;
+/* Estilos do Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #12394f;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  border: 2px solid #20dad8;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #20dad8;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
   background-color: #146783;
+  border: 1px solid #20dad8;
   color: white;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  background-color: #1da4c3;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #20dad8;
+}
+
+/* Remova o username-input existente */
+.username-input {
+  display: none;
 }
 
 .message-input {
