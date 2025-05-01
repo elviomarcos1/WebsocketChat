@@ -1,0 +1,66 @@
+body {
+    color: #fff;
+    background-color: #003456;
+    margin: 0;
+    padding: 40px 0; /* Espaço em cima e embaixo */
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px); /* Desconta o padding vertical do body */
+    padding: 0 40px;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+  
+  .chat-box {
+    flex: 3;
+    background-color: #ffffff22;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+  
+  .menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 300px;
+    gap: 10px;
+  }
+  
+  .message-box {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #messageInput {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  button.btn {
+    flex-shrink: 0;
+  }
+  
+  input.form-control {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .chat-box .mensagem {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
+  
+  

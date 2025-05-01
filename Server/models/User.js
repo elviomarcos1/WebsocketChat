@@ -10,7 +10,7 @@ class User {
       });
     
       if (nickInUse) {
-        this.ws.send(JSON.stringify({ type: 'error', message: 'Nick em uso' }));
+        this.ws.send(JSON.stringify({ type: 'error', message: 'Este nome de usuário já está sendo usado' }));
       } else {
         this.nick = nick;
         this.ws.nick = nick; // Adiciona o nick ao socket para referência
